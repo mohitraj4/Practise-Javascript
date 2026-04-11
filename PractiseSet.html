@@ -9,6 +9,8 @@
       height: 60px;
       width: 70px;
       cursor: pointer;
+      border: none;
+      border-radius: 20px;
     }
     .odd{
       background-color: chocolate;
@@ -24,11 +26,17 @@
 
   
   <script>
+
     let noOfTimePressed=0;
     function noOfTimesClicked(){
-      
-      let button=document.querySelector('#my-btn');
       noOfTimePressed++; 
+      updateButton();
+
+    }
+
+
+    function updateButton(){
+        let button=document.querySelector('#my-btn');
       if(noOfTimePressed %2 ===0){
         button.classList.remove('odd');
         button.classList.add('even');
@@ -40,6 +48,7 @@
       button.innerText=noOfTimePressed;
 
     }
+    updateButton();
 
     
 
