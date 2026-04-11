@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Document</title>
+  <link rel="stylesheet" href="practiseSet1.css">
+</head>
+<body>
+  <!-- <button class="Add-bag" onclick="alert('Nothing here')">Add to Bag</button>
+  <button class="wish-list"onclick="alert('Empty field')">❤️Wishlist</button> -->
+  <button class="tbutton" onclick=" alert(BagSummary)">check Price</button>
+</body>
+<script>
+  //alert('Welcome buddy');
+  let jeansPrice= 5000-(5000*20/100)-250;
+  let bagPrice= 3000-(3000*50/100)-99;
+  let totalValue= jeansPrice+bagPrice;
+  let priceValue= Math.round( (totalValue) + totalValue*18/100 +20+20);
+  let BagSummary=(`Your Final  BagSummary Amount is  ${priceValue}`);
+  console.log(BagSummary);
+  
+</script>
+</html>
