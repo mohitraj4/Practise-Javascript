@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Practise Set</title>
+  <style>
+    #my-btn{
+      font-size: 50px;
+      height: 60px;
+      width: 70px;
+      cursor: pointer;
+    }
+    .odd{
+      background-color: chocolate;
+    }
+    .even{
+      background-color:aqua;
+    }
+  </style>
+</head>
+<body>
+  <h3 id="greeting"></h3>
+  <button id="my-btn" onclick="noOfTimesClicked()">0</button>
+
+  
+  <script>
+    let noOfTimePressed=0;
+    function noOfTimesClicked(){
+      
+      let button=document.querySelector('#my-btn');
+      noOfTimePressed++; 
+      if(noOfTimePressed %2 ===0){
+        button.classList.remove('odd');
+        button.classList.add('even');
+
+      }else{
+        button.classList.remove('even');
+        button.classList.add('odd');
+      }
+      button.innerText=noOfTimePressed;
+
+    }
+
+    
+
+    
+
+
+
+
+
+
+    function show(name='Dear'){
+    let currentDate=new Date();
+   // let hours=currentDate.getHours();
+    let hours= 13;
+    let heading=document.querySelector('#greeting');
+
+    if(hours>5 && hours<12){
+      heading.innerText=`Good Morning ${name}`;
+    }else if(hours>12 && hours<18){
+      heading.innerText=`Good Afternoon ${name}`;
+
+    }else{
+      heading.innerText=`Good Night ${name}`;
+    }
+  }
+  show('Mohit');
+
+  </script>
+</body>
+</html>
