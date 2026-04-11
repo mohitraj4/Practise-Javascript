@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Date</title>
+</head>
+<body>
+  <!-- <button class="my-button">click-me</button> -->
+
+  <div class="my-div">This is the div class</div>
+
+
+  <script>
+    // let mydate=new Date();
+    // console.log(mydate);
+    let button= document.createElement('button');
+    document.querySelector('.my-div').appendChild(button);
+    button.innerText='click me';
+    document.querySelector('.my-div').remove(button);
+    document.querySelector('my-div').replaceChild(button)
+    
+
+  </script>
+</body>
+</html>
